@@ -1,12 +1,18 @@
 using UnityEngine;
 
-/// <summary>
-/// Etat minimal partage par les interfaces du projet.
-/// L'ancien projet referencait ce composant sans conserver son script.
-/// </summary>
-public sealed class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    [Header("References")]
+    [SerializeField] private PlayerController player;
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private ObjectSpawner objectSpawner;
+    [SerializeField] private SpawnMenuUI spawnMenuUI;
+
+    public PlayerController Player => player;
+    public CameraController CameraCtrl => cameraController;
+    public ObjectSpawner Spawner => objectSpawner;
 
     public bool IsMenuOpen { get; private set; }
 
@@ -17,14 +23,7 @@ public sealed class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
-    }
-
-    private void OnDestroy()
-    {
-        if (Instance == this)
-            Instance = null;
     }
 
     public void OpenMenu()
@@ -35,5 +34,10 @@ public sealed class GameManager : MonoBehaviour
     public void CloseMenu()
     {
         IsMenuOpen = false;
+    }
+
+    public void ToggleMenu()
+    {
+        IsMenuOpen = !IsMenuOpen;
     }
 }

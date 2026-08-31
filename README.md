@@ -6,9 +6,9 @@ Simulation VR d'un restaurant japonais thème Pokémon, développée sous Unity 
 
 Une extension indépendante ajoute un distributeur automatique réutilisable. L'utilisateur sélectionne un produit avec une main VR et reçoit directement l'objet choisi dans cette main. Les scripts et le générateur de prefab se trouvent dans `Assets/Scripts/VendingMachine/`, `Assets/Editor/VendingMachinePrefabBuilder.cs` et `Assets/VendingMachine/`.
 
-Le distributeur est volontairement fourni comme prefab autonome : aucune scène existante n'est modifiée automatiquement.
+Le distributeur est fourni comme prefab autonome et il est également installé dans `Assets/Scenes/MainScene.unity`, directement dans le restaurant. Il est placé devant la caméra du joueur et orienté vers lui.
 
-Une scène de démonstration séparée est disponible dans `Assets/VendingMachine/Scenes/DistributeurDemo.unity`. Elle permet de cliquer sur les trois boutons avec la souris et de vérifier la distribution des objets sans casque VR. `MainScene` reste inchangée.
+Une scène de démonstration séparée reste disponible dans `Assets/VendingMachine/Scenes/DistributeurDemo.unity`. Dans les deux scènes, les trois boutons peuvent être testés à la souris sans casque VR. Le script `Assets/Editor/VendingMachineRestaurantIntegrator.cs` permet de réinstaller ou de valider automatiquement l'intégration dans le restaurant.
 
 ---
 
@@ -33,8 +33,17 @@ Une scène de démonstration séparée est disponible dans `Assets/VendingMachin
 
 ### Lancer
 1. Ouvrir `Assets/Scenes/MainScene.unity`
-2. Mettre le casque Quest (Link ou build APK)
-3. Appuyer sur **JOUER** sur le menu d'accueil
+2. Appuyer sur **JOUER** sur le menu d'accueil
+3. Avec un casque : utiliser les interactions VR habituelles.
+4. Sans casque : cliquer à la souris sur `SODA`, `SNACK` ou `JUS` sur le distributeur.
+
+### Vérification automatique du distributeur
+
+Dans le menu Unity `Rattrapage` :
+
+- `Installer le distributeur dans le restaurant` reconstruit le prefab et le place dans `MainScene` ;
+- `Valider le distributeur dans le restaurant` vérifie la présence d'une machine, des trois boutons et du contrôle souris ;
+- `Creer la scene de demonstration` régénère la scène indépendante sans casque.
 
 ---
 
@@ -164,6 +173,7 @@ Couteau Scalpereur ─┤
 - **Poubelle_Miasmax** — avec `TrashBin`
 - **PikachuSpawner** — GameObject dédié
 - **MainMenu** — Canvas World Space avec `MainMenuUI`
+- **Distributeur automatique - Rattrapage** — distributeur à trois produits, utilisable en VR ou à la souris
 
 ### Dossiers
 ```

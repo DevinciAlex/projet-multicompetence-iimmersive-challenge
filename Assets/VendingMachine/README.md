@@ -1,6 +1,6 @@
 # Distributeur VR
 
-Ce module ajoute un distributeur autonome sans modifier les scènes existantes.
+Ce module ajoute un distributeur autonome. Le prefab reste réutilisable et un exemplaire est installé dans la scène du restaurant `Assets/Scenes/MainScene.unity`.
 
 ## Fonctionnement
 
@@ -26,8 +26,13 @@ Cette opération crée uniquement les ressources du distributeur. Elle ne place 
 4. Appuyer sur Play.
 5. Cliquer avec la souris sur `SODA`, `SNACK` ou `JUS`.
 
-Le produit apparaît devant la machine et tombe sur le sol. Cette scène séparée permet de démontrer le distributeur sans casque et ne modifie pas `MainScene`.
+Le produit apparaît devant la machine et tombe sur le sol. Cette scène séparée permet de démontrer le distributeur sans casque indépendamment du restaurant.
 
-## Ajout ultérieur
+## Installation dans le restaurant
 
-Une fois le prefab généré, il pourra être glissé plusieurs fois dans `MainScene`. Tous les exemplaires utiliseront le même code et pourront distribuer les mêmes produits.
+1. Utiliser `Rattrapage > Installer le distributeur dans le restaurant`.
+2. Le script ouvre `MainScene`, place une seule machine devant la caméra du joueur et l'oriente vers lui.
+3. Le contrôle souris est ajouté à la caméra pour permettre le test sans casque.
+4. Utiliser `Rattrapage > Valider le distributeur dans le restaurant` pour vérifier automatiquement la machine, les trois boutons et la distribution d'un produit.
+
+Une nouvelle installation remplace uniquement l'ancien exemplaire du distributeur et évite ainsi les doublons.

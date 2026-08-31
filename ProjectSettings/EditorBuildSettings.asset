@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 09f6d45930cdf6b418f7999b18017924
-  - enabled: 1
-    path: Assets/VendingMachine/Scenes/DistributeurDemo.unity
-    guid: dfc6b1a0cef2cc24681f2ecda86ea491
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f3b4d8a844bb38f458a058e5f609b81c, type: 2}

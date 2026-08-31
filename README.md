@@ -8,6 +8,8 @@ Une extension indépendante ajoute un distributeur automatique réutilisable. L'
 
 Le distributeur est volontairement fourni comme prefab autonome : aucune scène existante n'est modifiée automatiquement.
 
+Une scène de démonstration séparée est disponible dans `Assets/VendingMachine/Scenes/DistributeurDemo.unity`. Elle permet de cliquer sur les trois boutons avec la souris et de vérifier la distribution des objets sans casque VR. `MainScene` reste inchangée.
+
 ---
 
 ## Sommaire

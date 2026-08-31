@@ -18,6 +18,16 @@ Ce module ajoute un distributeur autonome sans modifier les scènes existantes.
 
 Cette opération crée uniquement les ressources du distributeur. Elle ne place rien dans une scène.
 
+## Scène de démonstration sans casque
+
+1. Attendre la fin de la compilation dans Unity.
+2. Utiliser `Rattrapage > Créer la scène de démonstration`.
+3. Ouvrir `Assets/VendingMachine/Scenes/DistributeurDemo.unity` si Unity ne l'affiche pas automatiquement.
+4. Appuyer sur Play.
+5. Cliquer avec la souris sur `SODA`, `SNACK` ou `JUS`.
+
+Le produit apparaît devant la machine et tombe sur le sol. Cette scène séparée permet de démontrer le distributeur sans casque et ne modifie pas `MainScene`.
+
 ## Ajout ultérieur
 
 Une fois le prefab généré, il pourra être glissé plusieurs fois dans `MainScene`. Tous les exemplaires utiliseront le même code et pourront distribuer les mêmes produits.

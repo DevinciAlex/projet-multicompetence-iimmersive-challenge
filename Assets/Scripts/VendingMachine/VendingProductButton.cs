@@ -64,5 +64,33 @@ namespace Rattrapage.VendingMachine
         {
             movingPart.localPosition = initialLocalPosition;
         }
+
+        /// <summary>
+        /// Active le bouton sans interactor XR. Cette methode est utilisee
+        /// par la scene de demonstration clavier/souris.
+        /// </summary>
+        public void ActivateForDesktop()
+        {
+            if (movingPart == null)
+                movingPart = transform;
+
+            movingPart.localPosition = initialLocalPosition + Vector3.back * pressedDepth;
+
+            if (vendingMachine == null)
+            {
+                Debug.LogWarning("Ce bouton n'est relie a aucun distributeur.", this);
+                return;
+            }
+
+            vendingMachine.Dispense(productIndex, null);
+            CancelInvoke(nameof(ResetButton));
+            Invoke(nameof(ResetButton), 0.15f);
+        }
+
+        private void ResetButton()
+        {
+            if (movingPart != null)
+                movingPart.localPosition = initialLocalPosition;
+        }
     }
 }

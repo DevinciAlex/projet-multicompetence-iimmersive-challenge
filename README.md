@@ -2,6 +2,11 @@
 
 Simulation VR d'un restaurant japonais thème Pokémon, développée sous Unity avec le **XR Interaction Toolkit 3.4.1** et **URP**. Compatible Meta Quest (Android) et PC-VR (OpenXR).
 
+## Liens du rendu
+
+- Dépôt GitHub : <https://github.com/DevinciAlex/projet-multicompetence-iimmersive-challenge>
+- Vidéo de démonstration : <https://youtu.be/XnxrAsjUoyI>
+
 ## Extension pour le rattrapage : distributeur VR
 
 Une extension indépendante ajoute un distributeur automatique réutilisable. L'utilisateur sélectionne un produit avec une main VR et reçoit directement l'objet choisi dans cette main. Les scripts et le générateur de prefab se trouvent dans `Assets/Scripts/VendingMachine/`, `Assets/Editor/VendingMachinePrefabBuilder.cs` et `Assets/VendingMachine/`.

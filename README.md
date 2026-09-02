@@ -103,7 +103,7 @@ Le joueur est **15% plus grand** que la normale (scale XR Origin à 1.15) pour u
 - Contrôle une **liste de lumières** assignables dans l'inspector
 - Son de clic (switch1.wav, CC0 Kenney)
 
-### Pikachu AI
+### Comportement autonome des Pikachus
 - **`PikachuSpawner`** instancie 20 Pikachus au Start
 - **`PikachuWander`** : wander aléatoire + fuite quand le joueur s'approche
 - **Détection de murs** via raycasts en éventail + séparation entre Pikachus
@@ -220,7 +220,7 @@ Assets/
 | `KnifeSetup` | Far-grab blaster pour le couteau |
 | `SlidingDoorController` | Porte coulissante avec XR interaction |
 | `LightSwitchSetup` | Interrupteur avec animation rocker + contrôle lumières |
-| `PikachuWander` | IA wander + flee, gère grab/throw |
+| `PikachuWander` | Déplacement autonome, fuite à l'approche du joueur et gestion du grab/throw |
 | `PikachuSpawner` | Spawn N Pikachus, assigne les sons |
 | `CuttingBoard` | Étapes 1 et 2 de la cuisine (pose + découpe) |
 | `FryingPan` | Étape 3 (poêle + pikachu découpé → plat) |
@@ -272,5 +272,8 @@ Modèles 3D (Pikachu, Scalpereur, etc.) : fournis par l'utilisateur, droits rés
 - Manuel Unity : <https://docs.unity3d.com/Manual/index.html>
 - XR Interaction Toolkit : <https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.4/manual/index.html>
 - Configuration générale XR Interaction Toolkit : <https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.4/manual/general-setup.html>
+- Composant XR Grab Interactable : <https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.4/manual/xr-grab-interactable.html>
+- Input System 1.19 : <https://docs.unity3d.com/Packages/com.unity.inputsystem@1.19/manual/index.html>
+- API `PrefabUtility` pour les outils éditeur : <https://docs.unity3d.com/ScriptReference/PrefabUtility.html>
 - Plug-in OpenXR pour Unity : <https://docs.unity3d.com/Packages/com.unity.xr.openxr@latest>
 - Standard OpenXR : <https://www.khronos.org/openxr/>
